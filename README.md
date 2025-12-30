@@ -12,7 +12,7 @@ This repository serves as a comprehensive template for building Android applicat
    ```
    Replace `YourFeatureName` with the desired name for your new feature. The feature will be created under the `feature` directory. You can also make use of additional parameter `--addToNavBar` to automatically integrate the new feature into the app's navigation bar.
 3. **Sync the project**: After generating the new feature, sync your project with Gradle files (`File > Sync Project with Gradle Files` in Android Studio) to make Gradle aware of the new module.
-4. **Customize your feature**: The generated feature module will include boilerplate code for a ViewModel (using MVI architecture), a Composable screen, dependency injection and navigation setup and will be 
+4. **Customize your feature**: The generated feature module will include boilerplate code for a ViewModel (using MVI architecture), a Composable screen, dependency injection and navigation setup and will be ready for you to customize and expand upon.
 
 ## Feature structure
 Each generated feature module will have the following structure:
