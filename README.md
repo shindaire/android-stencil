@@ -51,6 +51,15 @@ example/
 ```
 Feel free to modify and expand upon the generated code to fit the specific needs of your feature. For example, you might want to add additional layers such as use cases in the domain layer or data sources in the data layer.
 
+## Project structure
+The project is organized into several key modules to promote a clean architecture and separation of concerns:
+- `app`: The main application module that serves as the entry point for the app.
+- `core`: A shared module containing common utilities, base classes such as `PatternViewModel`, and components used across multiple features.
+- `buildSrc`: A module for managing dependencies and versions in a centralized manner, containing Gradle custom tasks including the feature generation task.
+- `feature`: A directory containing all feature modules generated using the custom Gradle task.
+- `baselineprofile`: A module for baseline profile configurations to optimize app performance.
+- `navigation`: A module dedicated to handling navigation logic and definitions across the app.
+
 ## Technologies used
 ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=android&logoColor=white)
