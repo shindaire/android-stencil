@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @Stable
 @HiltViewModel
-class ExampleViewModel @Inject constructor(
+internal class ExampleViewModel @Inject constructor(
     // Inject dependencies here if needed
     @ApplicationContext private val context: Context
 ) : PatternViewModel<State, Intent, Effect>(

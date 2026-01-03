@@ -3,7 +3,7 @@ package com.app.feature.example.presentation.mvi
 import androidx.compose.runtime.Immutable
 import com.app.core.ui.mvi.UiState
 
-object ExampleContract {
+internal object ExampleContract {
         
     @Immutable
     data class State(

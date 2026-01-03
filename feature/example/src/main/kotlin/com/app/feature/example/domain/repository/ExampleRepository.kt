@@ -1,5 +1,5 @@
 package com.app.feature.example.domain.repository
                 
-interface ExampleRepository {
+internal interface ExampleRepository {
     // Define repository methods here
 }
