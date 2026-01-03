@@ -20,13 +20,13 @@ kotlin {
 }
 
 android {
-    namespace = "${Constants.BASE_PACKAGE}.android"
+    namespace = "${Constants.BASE_PACKAGE}.${Constants.APP_NAME}"
     compileSdk {
         version = release(Constants.COMPILE_SDK)
     }
 
     defaultConfig {
-        applicationId = "${Constants.TOP_LEVEL_DOMAIN}.${Constants.ORG_NAME}.${Constants.APP_NAME}"
+        applicationId = "${Constants.BASE_PACKAGE}.${Constants.APP_NAME}"
         minSdk = Constants.MIN_SDK
         targetSdk = Constants.TARGET_SDK
         versionCode = Constants.VERSION_CODE
